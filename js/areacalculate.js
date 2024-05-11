@@ -1,21 +1,32 @@
 
  function calculateTriangleArea() {
     
-    const baseField = document.getElementById('triangleBase');
-    const baseValueText = baseField.value ;
-    const base = parseFloat(baseValueText);
+    // const baseField = document.getElementById('triangleBase');
+    // const baseValueText = baseField.value ;
+    // const base = parseFloat(baseValueText);
+    // console.log(base);
+
+    const base = getIputValueById('triangleBase')
     console.log(base);
 
-    const heightField = document.getElementById('triangleHeight');
-    const heightvalueText = heightField.value;
-    const height= parseFloat(heightvalueText);
+    // const heightField = document.getElementById('triangleHeight');
+    // const heightvalueText = heightField.value;
+    // const height= parseFloat(heightvalueText);
+    // console.log(height);
+
+    const height = getIputValueById('triangleHeight')
     console.log(height);
-
+  
+  
     const area =0.5 * base * height;
-   console.log(area)
+    console.log(area)
 
-   const result = document.getElementById('resultarea')
-    result.innerText = area;
+    //    const result = document.getElementById('resultarea')
+    //     result.innerText = area;
+
+    setTextElementValueById('resultarea', area);
+
+
 }
 
 function calculateRectangleArea(){
@@ -34,4 +45,20 @@ function calculateRectangleArea(){
  
     const result_rec = document.getElementById('resultarea_rec')
     result_rec.innerText =area;
+}
+
+function calculeParallelogramArea(){
+    
+    const base_p = getIputValueById('parallelogram_base')
+    console.log(base_p);
+
+    const height_p = getIputValueById('parallelogram_height')
+    console.log(height_p);
+  
+  
+    const area_P = base_p * height_p;
+    console.log(area_P)
+
+    setTextElementValueById('parallelogram_res',area_P);
+
 }
