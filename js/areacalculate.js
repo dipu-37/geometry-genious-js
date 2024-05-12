@@ -61,4 +61,6 @@ function calculeParallelogramArea(){
 
     setTextElementValueById('parallelogram_res',area_P);
 
+    addToCalculationEntry('parallelogram' , area_P)
+
 }
